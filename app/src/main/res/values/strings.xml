@@ -7,4 +7,10 @@
     <string name="todo">TODO</string>
     <string name="_2019">2019</string>
     <string name="created_at">Created at...</string>
+    <string name="andres_h">Andres H.</string>
+    <string name="about_our_team">About Our Team</string>
+    <string name="connor_g">Connor G.</string>
+    <string name="joshua_d">Joshua D.</string>
+
+
 </resources>
