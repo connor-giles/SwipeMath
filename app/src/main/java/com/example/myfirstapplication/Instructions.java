@@ -3,11 +3,13 @@ package com.example.myfirstapplication;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class Statistics extends AppCompatActivity {
+public class Instructions extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.statistics);
+        setContentView(R.layout.instructions);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 }
