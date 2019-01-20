@@ -1,9 +1,13 @@
+//Token that will be moved around the board. Only needs initial x, y, and value.
 public class Token
 {
-    private int x,y;
-    private int tokenValue;
+    private int x,y, tokenValue;
+    private int tempX, tempY, tempTokenValue;
+    private int previousX, previousY,previousTokenValue;
+    private int moveCounter = 0;
+    private boolean canUndo = false;
 
-    public static enum Direction{UP, DOWN, LEFT, RIGHT};
+    public enum Direction{UP, DOWN, LEFT, RIGHT};
 
     public Token(int xInit, int yInit, int tokenValue) { // Constructor
         x = xInit;
@@ -18,6 +22,10 @@ public class Token
 
     public int getTokenValue() { // Return current value of the token
         return tokenValue;
+    }
+
+    public int getMoveCounter() {
+        return moveCounter;
     }
 
     public int setTokenValue(int tokenValue) { // Performs operation on token's value and returns new value of the token
@@ -46,22 +54,60 @@ public class Token
         y = numberWrapper(y, size);
     }
 
+    public void undoLast() { //sets
+        x = previousX;
+        y = previousY;
+        tokenValue = previousTokenValue;
+        canUndo = false;
+    }
+
+    public boolean getUndoState() {
+        return canUndo;
+    }
+
     public void moveToken(Direction direction, Gameboard board) { // Moves the token on the board and changes its value and location accordingly.
-        if (direction == Direction.UP) {
-            setLocation(x, y - 1, board);
+        tempX = x;
+        tempY = y;
+        tempTokenValue = tokenValue;
+        if (direction == Direction.UP) { //Addition
+            y -= 1;
+            verifyLocation(board.getSize());
             tokenValue += board.getBoardValueAt(x, y);
         }
-        else if (direction == Direction.DOWN) {
-            setLocation(x, y + 1, board);
+        else if (direction == Direction.DOWN) { //Subtraction
+            y += 1;
+            verifyLocation(board.getSize());
             tokenValue -= board.getBoardValueAt(x, y);
         }
-        else if (direction == Direction.LEFT) {
-            setLocation(x - 1, y, board);
+        else if (direction == Direction.LEFT) { //Multiplication
+            x -= 1;
+            verifyLocation(board.getSize());
             tokenValue *= board.getBoardValueAt(x, y);
         }
-        else if (direction == Direction.RIGHT) {
-            setLocation(x + 1, y, board);
+        else if (direction == Direction.RIGHT) { //Division. Only allowed if perfectly divisible.
+            x += 1;
+            verifyLocation(board.getSize());
+            if (tokenValue % board.getBoardValueAt(x, y) != 0) {
+                x = tempX;
+                y = tempY;
+                tokenValue = tempTokenValue;
+                System.err.println("Can only slide right if perfectly divisible");
+                return;
+            }
             tokenValue /= board.getBoardValueAt(x, y);
         }
+        if (x == previousX && y == previousY) {
+            x = tempX;
+            y = tempY;
+            tokenValue = tempTokenValue;
+            System.err.println("Cannot move back to previous space!");
+            return;
+        } else {
+            previousX = tempX;
+            previousY = tempY;
+            previousTokenValue = tempTokenValue;
+        }
+        canUndo = true; //after a successful slide, the ability to undo that slide is enabled.
+        moveCounter++;
     }
 }
