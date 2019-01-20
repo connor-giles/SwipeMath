@@ -7,15 +7,29 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
+import android.widget.Button;
+
+
 
 public class MainActivity extends AppCompatActivity {
+    Button startGame;
 
+    public static final String EXTRA_MESSAGE = "com.example.myfirstapplication";
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        startGame = (Button)findViewById(R.id.button);
+
+        startGame.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startGame();
+            }
+        });
+
+
     }
 
     @Override
@@ -45,9 +59,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void onButtonTap(View v)
+    public void startGame()
     {
-        Toast myToast =  Toast.makeText(getApplicationContext(), "Game would start now!", Toast.LENGTH_LONG);
-        myToast.show();
+        Intent gameIntent = new Intent(this, GameActivity.class);
+        startActivity(gameIntent);
     }
 }
