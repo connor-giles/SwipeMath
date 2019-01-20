@@ -1,3 +1,5 @@
+package com.example.myfirstapplication;
+
 //Token that will be moved around the board. Only needs initial x, y, and value.
 public class Token
 {
@@ -28,7 +30,7 @@ public class Token
         return moveCounter;
     }
 
-    public int setTokenValue(int tokenValue) { // Performs operation on token's value and returns new value of the token
+    public int setTokenValue(int tokenValue) { // Sets token's value and returns new value of the token
         this.tokenValue = tokenValue;
         return tokenValue;
     }

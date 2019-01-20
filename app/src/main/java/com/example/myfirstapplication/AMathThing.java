@@ -1,3 +1,5 @@
+package com.example.myfirstapplication;
+
 import java.util.Scanner;
 
 public class AMathThing {
@@ -25,7 +27,11 @@ public class AMathThing {
                     System.exit(0);
                 }
                 else if (direction == 'Z') { //key to undo last move
-                    player.undoLast();
+                    if (player.getUndoState()) {
+                        player.undoLast();
+                    } else {
+                        System.err.println("Must successfully move in a direction to enable undo");
+                    }
                     validChoice = true;
                 }
                 else if (direction == 'U') {
@@ -48,12 +54,13 @@ public class AMathThing {
                     System.out.println("Please enter a valid direction.");
                 }
                 if (player.getTokenValue() > 255 || player.getTokenValue() < 0) {
+                    board.printBoard();
                     System.out.println("Went outside of the 0-255 limit! You Lose!");
                     System.exit(0);
                 } else if (player.getTokenValue() == TARGET_NUMBER) {
                     System.out.println("\nTarget Value = " + TARGET_NUMBER);
                     board.printBoard();
-                    System.out.println("Congratulation! You Win!");
+                    System.out.println("Congratulation! You Win! Moves: " + player.getMoveCounter());
                     continueGame = false;
                 }
             }
