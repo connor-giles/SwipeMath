@@ -2,7 +2,7 @@ package com.example.myfirstapplication;
 
 public class Gameboard
 {
-    private int size;
+    private int size; //Since boards will always be square, size is both length and width.
     private int[][] layout;
     private Token token;
 
@@ -20,7 +20,7 @@ public class Gameboard
         }
     }
 
-    public void printBoard() {
+    public void printBoard() { // Prints the board
         int[] tokenLocation = token.getLocation();
         for (int i = 0; i < size*4 + 1; i++) {
             System.out.print('-');
@@ -43,7 +43,7 @@ public class Gameboard
         return token;
     }
 
-    public int getBoardValueAt(int x, int y) {
+    public int getBoardValueAt(int x, int y) {//Returns value at specific grid location
         return layout[y][x];
     }
 
