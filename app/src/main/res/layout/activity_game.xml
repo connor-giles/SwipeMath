@@ -7,68 +7,99 @@
     tools:context=".GameActivity">
 
     <TextView
-        android:id="@+id/textView34"
+        android:id="@+id/bottom_left"
         android:layout_width="122dp"
         android:layout_height="120dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginBottom="214dp"
         android:text="7"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="489dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/bottom_middle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/middle_left" />
 
     <TextView
-        android:id="@+id/textView35"
+        android:id="@+id/bottom_middle"
         android:layout_width="122dp"
         android:layout_height="120dp"
+        android:layout_marginBottom="214dp"
         android:text="8"
-        tools:layout_editor_absoluteX="148dp"
-        tools:layout_editor_absoluteY="489dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/left_guide"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/middle_middle" />
 
     <TextView
-        android:id="@+id/textView36"
-        android:layout_width="122dp"
+        android:id="@+id/bottom_right"
+        android:layout_width="123dp"
         android:layout_height="120dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginRight="22dp"
+        android:layout_marginBottom="214dp"
         android:text="9"
-        tools:layout_editor_absoluteX="266dp"
-        tools:layout_editor_absoluteY="489dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bottom_middle"
+        app:layout_constraintTop_toBottomOf="@+id/middle_right" />
 
     <TextView
-        android:id="@+id/textView32"
+        android:id="@+id/middle_middle"
         android:layout_width="122dp"
         android:layout_height="120dp"
         android:text="5"
-        tools:layout_editor_absoluteX="148dp"
-        tools:layout_editor_absoluteY="369dp" />
+        app:layout_constraintBottom_toTopOf="@+id/guideline9"
+        app:layout_constraintEnd_toStartOf="@+id/left_guide"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/top_middle" />
 
     <TextView
-        android:id="@+id/textView33"
+        android:id="@+id/middle_right"
         android:layout_width="122dp"
         android:layout_height="120dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginRight="22dp"
         android:text="6"
-        tools:layout_editor_absoluteX="266dp"
-        tools:layout_editor_absoluteY="369dp" />
+        app:layout_constraintBottom_toTopOf="@+id/guideline9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/middle_middle"
+        app:layout_constraintTop_toBottomOf="@+id/top_right" />
 
     <TextView
-        android:id="@+id/textView29"
+        android:id="@+id/top_middle"
         android:layout_width="122dp"
         android:layout_height="120dp"
-        android:text="21"
-        tools:layout_editor_absoluteX="144dp"
-        tools:layout_editor_absoluteY="249dp" />
+        android:layout_marginTop="248dp"
+        android:text="2"
+        app:layout_constraintBottom_toTopOf="@+id/guideline8"
+        app:layout_constraintEnd_toStartOf="@+id/left_guide"
+        app:layout_constraintStart_toEndOf="@+id/top_left"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView30"
+        android:id="@+id/top_right"
         android:layout_width="122dp"
         android:layout_height="120dp"
+        android:layout_marginTop="248dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginRight="22dp"
         android:text="3"
-        tools:layout_editor_absoluteX="266dp"
-        tools:layout_editor_absoluteY="249dp" />
+        app:layout_constraintBottom_toTopOf="@+id/guideline8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/top_middle"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView31"
+        android:id="@+id/middle_left"
         android:layout_width="122dp"
         android:layout_height="120dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginLeft="23dp"
         android:text="4"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="369dp" />
+        app:layout_constraintBottom_toTopOf="@+id/guideline9"
+        app:layout_constraintEnd_toStartOf="@+id/middle_middle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_left" />
 
     <android.support.constraint.Guideline
         android:id="@+id/left_guide"
@@ -141,11 +172,16 @@
         app:layout_constraintGuide_begin="610dp" />
 
     <TextView
-        android:id="@+id/textView26"
+        android:id="@+id/top_left"
         android:layout_width="122dp"
         android:layout_height="120dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="248dp"
         android:text="1"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="249dp" />
+        app:layout_constraintBottom_toTopOf="@+id/guideline8"
+        app:layout_constraintEnd_toStartOf="@+id/guideline5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
