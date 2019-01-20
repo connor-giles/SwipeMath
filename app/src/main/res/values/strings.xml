@@ -1,16 +1,19 @@
 <resources>
-    <string name="app_name">My First Application</string>
-    <string name="tapme">Tap Me!</string>
-    <string name="tap_me_if_you_dare">Tap me if you dare!</string>
+    <string name="app_name">SwipeMath</string>
     <string name="click_the_button_below_to_begin">Click the button below to begin!</string>
     <string name="start_game">Start Game!</string>
-    <string name="todo">TODO</string>
     <string name="_2019">2019</string>
     <string name="created_at">Created at...</string>
     <string name="andres_h">Andres H.</string>
     <string name="about_our_team">About Our Team</string>
     <string name="connor_g">Connor G.</string>
     <string name="joshua_d">Joshua D.</string>
+    <string name="todo">TODO</string>
+    <string name="hi_i_m_connor_i_am_a_second_year_computer_engineer_here_at_the_university_of_florida_i_m_the_one_who_made_this_menu_that_you_are_interacting_with_right_now_hope_you_enjoy_our_game">Hi, I\'m Connor! I am a second year Computer Engineer here at the University of Florida. I\'m the one who made this menu that you are interacting with right now. Hope you enjoy our game!</string>
+    <string name="i_m_josh_i_am_a_sophmore_at_uf_and_i_am_studying_computer_science_i_helped_create_the_ui_for_this_app_and_hope_you_enjoy_it_have_fun_playing_swipemath">I\'m Josh! I am a sophmore at UF and I am studying computer science. I helped create the UI for this app and hope you enjoy it. Have fun playing SwipeMath!</string>
+    <string name="hey_i_m_andres_i_am_a_first_year_computer_science_major_at_the_university_of_florida_i_wrote_all_the_java_code_for_this_app_i_hope_you_enjoy_spending_time_playing_swipemath">Hey! I\'m Andres. I am a first year Computer Science major at the University of Florida. I wrote all the java code for this app. I hope you enjoy spending time playing SwipeMath!</string>
+    <string name="andres">ANDRES</string>
+    <string name="poweredby">POWEREDBY</string>
 
 
 </resources>

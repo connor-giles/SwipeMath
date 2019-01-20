@@ -6,97 +6,117 @@
     android:layout_height="match_parent"
     tools:context=".About">
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="81dp"
-        android:layout_height="77dp"
-        android:layout_marginEnd="305dp"
-        android:layout_marginRight="305dp"
-        android:layout_marginBottom="7dp"
-        android:contentDescription="@string/todo"
-        app:layout_constraintBottom_toTopOf="@+id/textView6"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:srcCompat="@tools:sample/avatars[8]" />
-
     <TextView
-        android:id="@+id/textView6"
-        android:layout_width="84dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="34dp"
-        android:layout_marginLeft="34dp"
-        android:layout_marginEnd="293dp"
-        android:layout_marginRight="293dp"
-        android:layout_marginBottom="303dp"
-        android:text="@string/andres_h"
+        android:id="@+id/andrestext"
+        android:layout_width="262dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="240dp"
+        android:text="@string/hey_i_m_andres_i_am_a_first_year_computer_science_major_at_the_university_of_florida_i_wrote_all_the_java_code_for_this_app_i_hope_you_enjoy_spending_time_playing_swipemath"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/connor" />
+
+    <TextView
+        android:id="@+id/aboutteam"
+        android:layout_width="337dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginLeft="37dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginRight="37dp"
+        android:layout_marginBottom="29dp"
+        android:text="@string/about_our_team"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        app:layout_constraintBottom_toTopOf="@+id/josh"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.942" />
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="81dp"
-        android:layout_height="77dp"
-        android:layout_marginEnd="305dp"
-        android:layout_marginRight="305dp"
-        android:layout_marginBottom="5dp"
+        android:id="@+id/josh"
+        android:layout_width="89dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginBottom="40dp"
         android:contentDescription="@string/todo"
-        app:layout_constraintBottom_toTopOf="@+id/textView5"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:srcCompat="@tools:sample/avatars[0]" />
+        app:layout_constraintBottom_toTopOf="@+id/connor"
+        app:layout_constraintEnd_toStartOf="@+id/joshText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/josh" />
+
+    <ImageView
+        android:id="@+id/connor"
+        android:layout_width="85dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginLeft="31dp"
+        android:layout_marginBottom="368dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/connorText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/connor" />
 
     <TextView
-        android:id="@+id/textView5"
-        android:layout_width="96dp"
-        android:layout_height="19dp"
-        android:layout_marginStart="34dp"
-        android:layout_marginLeft="34dp"
-        android:layout_marginEnd="281dp"
-        android:layout_marginRight="281dp"
-        android:layout_marginBottom="22dp"
-        android:text="@string/connor_g"
-        app:layout_constraintBottom_toTopOf="@+id/imageView3"
+        android:id="@+id/joshText"
+        android:layout_width="244dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="36dp"
+        android:text="@string/i_m_josh_i_am_a_sophmore_at_uf_and_i_am_studying_computer_science_i_helped_create_the_ui_for_this_app_and_hope_you_enjoy_it_have_fun_playing_swipemath"
+        app:layout_constraintBottom_toTopOf="@+id/connorText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/josh"
+        app:layout_constraintTop_toBottomOf="@+id/aboutteam" />
 
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="259dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="76dp"
-        android:layout_marginLeft="76dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="76dp"
-        android:layout_marginRight="76dp"
-        android:layout_marginBottom="19dp"
-        android:text="@string/about_our_team"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        android:id="@+id/connorText"
+        android:layout_width="262dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="366dp"
+        android:text="@string/hi_i_m_connor_i_am_a_second_year_computer_engineer_here_at_the_university_of_florida_i_m_the_one_who_made_this_menu_that_you_are_interacting_with_right_now_hope_you_enjoy_our_game"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/connor" />
+
+    <ImageView
+        android:id="@+id/andres"
+        android:layout_width="88dp"
+        android:layout_height="86dp"
+        android:layout_marginTop="41dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.093"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/connor"
+        app:srcCompat="@drawable/andres"
+        android:contentDescription="@string/andres" />
+
+    <ImageView
+        android:id="@+id/poweredby"
+        android:layout_width="391dp"
+        android:layout_height="210dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/poweredby"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:srcCompat="@drawable/poweredby" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="81dp"
-        android:layout_height="77dp"
-        android:layout_marginEnd="305dp"
-        android:layout_marginRight="305dp"
-        android:contentDescription="@string/todo"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:srcCompat="@tools:sample/avatars[5]" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="96dp"
-        android:layout_height="19dp"
-        android:layout_marginStart="34dp"
-        android:layout_marginLeft="34dp"
-        android:layout_marginEnd="281dp"
-        android:layout_marginRight="281dp"
-        android:layout_marginBottom="23dp"
-        android:text="@string/joshua_d"
-        app:layout_constraintBottom_toTopOf="@+id/imageView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 </android.support.constraint.ConstraintLayout>
